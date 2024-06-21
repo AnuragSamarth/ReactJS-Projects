@@ -31,7 +31,7 @@ function App() {
       </div>
       <div>
       <label htmlFor="email"  className=" text-lg">
-        Enter your email: <input type="email" id="email" name='email'value={formData.email} onChange={handleChange} className=" p-3 border-2 border-black outline-none  rounded-md mb-4" />
+        Enter your email: <input type="email" id="email" name='email' value={formData.email} onChange={handleChange} className=" p-3 border-2 border-black outline-none  rounded-md mb-4" />
       </label>
       </div>
       <div>
@@ -41,6 +41,7 @@ function App() {
       </div>
       <div className=" ml-36">
       <input type="submit" className="p-3 border-2 border-black bg-green-600 rounded-2xl cursor-pointer"/>
+      {/* <button type="submit">submit</button> */}
       </div>
       </div>
     </form>
