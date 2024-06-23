@@ -3,38 +3,40 @@ import { Books } from "../data";
 import "swiper/css";
 import { register } from 'swiper/element/bundle';
 register();
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
+
 
 
 function TopSellingBooks(){
     
-//   const bookCoverPageRender = Books.map((book , i)=>{
-//     return (
-//         <div key={i}>
-//             <a href="#">
-//             <img src={book.book_cover} alt="book image" width="250px"/>
-//             </a>
-//         </div>
-//     )
-//   })
-//   console.log(bookCoverPageRender)
+  const bookCoverPageRender = Books.map((book , i)=>{
+    return (
+            <img src={book.book_cover} alt="book image" key={i} className=" w-[220px] inline-block mr-6"/>
+    )
+  })
+  
+  const slideLeft = ()=>{
+    let slider  = document.querySelector("#slider");
+    slider.scrollLeft = slider.scrollLeft - 500;
+  }
+
+  const slideRight = ()=>{
+    let slider = document.querySelector("#slider");
+    slider.scrollLeft = slider.scrollLeft + 500;
+  }
 
     return (
         <>
-           <div className="mt-16">
+           <div className=" mt-10 flex flex-col items-center">
               <h1 className=" font-bold text-2xl mb-5">Top Selling Books</h1>
-              <swiper-container slides-per-view="8" autoplay="true" enabled="true">
-             { 
-             Books.map((book, i)=>{
-             <swiper-slide>
-                   <div>
-                    <a href="#">
-                        <img src={book.book_cover} alt={book.title} key={i}/>
-                    </a>
-                   </div>
-              </swiper-slide>
-             })
-              }
-              </swiper-container>
+            <div className=" relative flex items-center">
+                <GrFormPrevious size={40} onClick={slideLeft} className="opacity-50 cursor-pointer  hover:opacity-100"/>
+               <div id="slider" className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide">
+                  {bookCoverPageRender}
+               </div>
+               <MdNavigateNext size={40} onClick={slideRight} className="opacity-50 cursor-pointer  hover:opacity-100"/>
+            </div>
            </div>
         </>
     )

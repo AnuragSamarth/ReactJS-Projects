@@ -16,7 +16,7 @@ function Hero() {
 
   return (
     <>
-      <div className=" mt-20 ml-16 space-y-4 grid gap-8  justify-items-center  md:grid-cols-2 md:items-center">
+      <div className=" mt-10 ml-16 space-y-4 grid gap-8  justify-items-center  md:grid-cols-2 md:items-center">
         <div>
           <h1 className="text-7xl font-bold mb-10">
             Unlock Worlds, <br />
