@@ -14,17 +14,18 @@ function CreateTodo({ setTodos, todos }) {
   }
 
   return (
-    <>
+    <div className="flex justify-center bg-red-300">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="todo"
           id="todo"
           placeholder="Enter the Todos..."
+          className=""
         />
         <button>Add Todo</button>
       </form>
-    </>
+    </div>
   );
 }
 

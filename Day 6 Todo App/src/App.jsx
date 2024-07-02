@@ -14,8 +14,10 @@ function App() {
 
   return (
     <>
+    <div className=" w-full h-screen p-10 bg-slate-500 relative">
       <CreateTodo setTodos={setTodos} todos={todos}/>
       <TodoList todos={todos} setTodos={setTodos} />
+    </div>
     </>
   );
 }
