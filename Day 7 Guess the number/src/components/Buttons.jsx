@@ -1,12 +1,17 @@
-function Buttons(){
+function Buttons({useRandomNum}){
+
+        function handleClick(e) {
+            e.preventDefault();
+            let numberRandom = Math.floor(Math.random() * 100);
+            useRandomNum(numberRandom);
+          }
+          
+
     return (
         <>
         <div className="w-full text-center mt-5">
         <form>
-            <button className="mr-5 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-            Submit
-            </button> 
-            <button className="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
+            <button className="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded" onClick={handleClick}>
             Start Game
             </button>
         </form>
