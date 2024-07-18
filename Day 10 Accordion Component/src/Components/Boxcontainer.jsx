@@ -6,7 +6,7 @@ function Boxcontainer(){
     return (
         <>
          <div className="w-[70%] h-[80%] border-4 shadow-slate-950 rounded-xl flex flex-col items-center">
-           <Box/>
+           <Box />
          </div>
         </>
     )
