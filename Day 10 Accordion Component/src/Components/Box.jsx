@@ -55,8 +55,8 @@ function Box() {
           key={index}
           onClick={
             enableMultipleSelection
-              ? () => handleMultiSelection(elem.id)
-              : () => handleSelection(elem.id)
+            ? handleMultiSelection.bind(this, elem.id)
+              : handleSelection.bind(this, elem.id)
           }
         >
           <div className="flex items-center justify-between mb-5">
