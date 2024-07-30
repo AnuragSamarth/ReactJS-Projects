@@ -1,10 +1,12 @@
+import Wrapper from "./components/Wrapper"
 function App() {
 
   return (
     <>
-     <h1 className="text-3xl font-bold underline text-black">
-      Hello world!
-    </h1>
+    <div className="w-full h-screen bg-zinc-800 flex flex-col items-center justify-center">
+    <h1 className="text-3xl text-cyan-200">Calculator</h1>
+     <Wrapper />
+   </div>
     </>
   )
 }
