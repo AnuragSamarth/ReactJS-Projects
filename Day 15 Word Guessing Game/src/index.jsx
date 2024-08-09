@@ -1,19 +1,18 @@
-import Button from "./components/button";
-import Input from "./components/input";
-import Tag from "./components/tag";
-import Text from "./components/text";
-
+import Controller from "./components/controller";
+import Hint from "./components/hint";
+import Keyboard from "./components/keyboard";
+import ScoreBoard from "./components/score-board";
+import './index.css'
 function WordGuessingGame(){
     console.dir(Text)
     return <div className="bg-slate-700">
-        <Input />
-        <Button label="K" onClick={()=>{console.log('k passed')}}/>
-        <Button label="=>" type={Button.Type.CIRCULAR} onClick={()=>{console.log('k passed')}}/>
-        <Tag label={'score'}/>
-        <Text text='Apple' type={Text.StyleType.ANSWER_HINT}/> <br />
-        <Text text='My Question' type={Text.StyleType.QUESTION_TITLE}/> <br />
-        <Text text='score' type={Text.StyleType.SCORE}/>
+        <div className="hint-score">
+         <Hint />
+         <ScoreBoard />
+        </div>
+         <Controller />
+         <Keyboard />
     </div>
 }
 
-export default WordGuessingGame;
+export default WordGuessingGame; 
