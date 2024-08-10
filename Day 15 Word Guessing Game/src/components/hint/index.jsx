@@ -2,7 +2,7 @@ import "./style.css";
 import Input from "../input";
 import Text from "../text";
 
-function Hint({ hint, handleInput, answerGivenByUser } = {}) {
+function Hint({ hint, handleInput, answerGivenByUser} = {}) {
   const arr = hint.split("");
   // console.log(arr);
 

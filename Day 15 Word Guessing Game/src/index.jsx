@@ -42,7 +42,15 @@ function WordGuessingGame() {
   }
 
   function handleKeyPress(key) {
-    console.log("key pressed", key);
+      const index = Object.keys(answerGivenByUser).length;
+      console.log(index)
+
+      if(index < hint.length){
+          const oldInfo = structuredClone(answerGivenByUser);
+          oldInfo[index] = key;
+          setAnswerGivenByUser(oldInfo)
+        }
+        // console.log(answerGivenByUser);
   }
 
   function handleInput({ index, value }) {
@@ -76,7 +84,7 @@ function WordGuessingGame() {
   }, [answerGivenByUser]);
 
   return (
-    <div className="bg-slate-700">
+    <div className="bg-slate-700 h-screen flex items-center flex-col justify-evenly">
       <div className="hint-score">
         <Hint
           key={id}
