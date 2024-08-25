@@ -18,6 +18,7 @@ function App() {
         <p className=" text-black">
           React hook that converts speech from the micrephone to text and makes it available to your component.
         </p>
+        <div>
         <div className="main-container w-full h-60 border-2 border-black mb-5 text-black">
           {transcript}
         </div>
@@ -29,6 +30,7 @@ function App() {
           <button className="border-2 border-black text-black p-3 rounded-lg" onClick={SpeechRecognition.stopListening}>
             Stop Listening
           </button>
+        </div>
         </div>
       </div>
     </>
