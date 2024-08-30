@@ -1,0 +1,10 @@
+input[type='text']{
+    border: 0;
+    background-color: transparent;
+    border-bottom:  4px solid rgb(255, 255, 255);
+    width: 60px;
+    outline: 0;
+    font-size: 40px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
