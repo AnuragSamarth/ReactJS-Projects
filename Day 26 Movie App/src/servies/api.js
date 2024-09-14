@@ -23,3 +23,12 @@ async function fetchTrending(time_window = 'day'){
 // }
 
 export { fetchTrending };
+
+
+// Movies & Series - Details
+export async function fetchDetails(id){  
+   const res = await axios.get(`${basedUrl}/${type}/${id}?api_key=${apiKey}`)
+   return res;
+}
+
+

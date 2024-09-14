@@ -9,6 +9,8 @@ import Shows from './Pages/shows/Shows.jsx'
 import Search from './Pages/search/Search.jsx'
 import Movies from './Pages/movies/Movies.jsx'
 import Home from './Pages/Home.jsx'
+import DetailsPage from './Pages/DetailsPage.jsx'
+import { DataProvider } from './context/DataContext.jsx'
 
 const router = createBrowserRouter([
    {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
           path: "/search",
           element: <Search/>
+      },
+      {
+        path: "/:type/:id",
+        element: <DetailsPage/>
       }
     ]
    },
@@ -38,7 +44,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ChakraProvider initialColorMode={theme.config. initialColorMode}>
+     <DataProvider>
       <RouterProvider router={router} />
+     </DataProvider>
     </ChakraProvider>
   </StrictMode>,
 )
