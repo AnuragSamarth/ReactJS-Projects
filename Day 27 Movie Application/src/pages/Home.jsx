@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchTrending } from "../services/api";
 import { ToastContainer, toast } from "react-toastify";
 // import { imagePath } from "../services/api";
-import Card from "../components/card/Card";
+import Card from "../components/Card/Card";
 import TrendingMoviesHeader from "../components/TreandingMovieHeader/TreandingMovieHeader";
 
 function Home() {
