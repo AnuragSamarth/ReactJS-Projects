@@ -9,7 +9,8 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [isInput, setIsInput] = useState(false);
   const [filterData, setFilterData] = useState("");
-  const [selectedData, setSelectedData] = useState("")
+  const [selectedData, setSelectedData] = useState("");
+  const [isSelectedData, setIsSelectedData] = useState(false)
   
     useEffect(()=>{
       const dataFilter = [...data].filter(item => item.name.toLowerCase().includes(inputText.toLowerCase()));
@@ -27,6 +28,7 @@ function App() {
   function handleClick(){
      return function(e){
       setSelectedData(e.target.innerHTML);
+       isSelectedData(true)
      }
   }
 
@@ -37,7 +39,7 @@ function App() {
       <div>
         <TextField
           onChange={handleChange}
-          value={inputText}
+          value={inputText || selectedData}
           placeholder={"Search Plz..."}
           className={` border-2 border-black p-2 rounded-lg`}
         />
