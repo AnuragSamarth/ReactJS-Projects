@@ -10,7 +10,7 @@ export function fetchCategorys(){
   return axios.get('https://dummyjson.com/products/category-list')
 }
 
-// export function fetchCategoryProducts(){
-//   return axios.get('https://dummyjson.com/products/category-list');
-// }
+export function fetchCategoryProducts(category){
+  return axios.get(`https://dummyjson.com/products/category/${category}`);
+}
 
