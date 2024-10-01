@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Card({product,id}) {
+function Card({product,id, path}) {
   const [isBtnClick, setIsBtnClick] = useState(false);
 // console.log(key)
   function handleClick() {
@@ -11,7 +11,7 @@ function Card({product,id}) {
   return (
     <>
     <div className="w-full max-w-sm mx-auto my-6 overflow-hidden bg-white rounded-lg shadow-lg">
-      <Link to={`/product-detail/${id}`} className="block">
+      <Link to={`${path}${id}`} className="block">
         <div className="relative h-64 overflow-hidden">
           <img
             src={product.thumbnail}

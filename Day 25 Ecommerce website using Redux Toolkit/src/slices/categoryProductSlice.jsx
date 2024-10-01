@@ -1,5 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchCategorys, fetchCategoryProducts as fetchCategoryProductsApi } from "../api";
+import {
+  fetchCategorys,
+  fetchCategoryProducts as fetchCategoryProductsApi,
+} from "../api";
 
 const initialState = {
   categories: [],
@@ -26,9 +29,7 @@ export const fetchCategoryProducts = createAsyncThunk(
   "category/fetchProducts",
   async (category, { rejectWithValue }) => {
     try {
-      const response = await fetchCategoryProductsApi(
-        category
-      );
+      const response = await fetchCategoryProductsApi(category);
       // console.log(response);
       return response.data.products;
     } catch (error) {

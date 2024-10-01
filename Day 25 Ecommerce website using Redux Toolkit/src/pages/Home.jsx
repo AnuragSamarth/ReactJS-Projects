@@ -30,7 +30,7 @@ function Home() {
       <div className="w-full flex flex-wrap justify-between p-10">
         {products &&
           products.map((product) => (
-            <Card key={product.id} product={product} id={product.id} />
+            <Card key={product.id} product={product} id={product.id} path={`/product-detail/`}/>
           ))}
       </div>
     </>

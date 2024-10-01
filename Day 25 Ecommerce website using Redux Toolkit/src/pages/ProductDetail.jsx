@@ -22,7 +22,7 @@ function ProductDetail() {
   }, [dispatch, products.length]);  
 
   const filterProduct = products.find((item)=> item.id === productId)
-  console.log(filterProduct)
+  // console.log(filterProduct)
 
   if(loading){
     return <h1>Loading...</h1>
