@@ -1,0 +1,40 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box{
+  width: 600px;
+  height: 500px;
+  padding: 10px;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cell{
+  width: 150px;
+  height: 150px;
+  border: 1px solid wheat;
+  /* background-color: lightgreen; */
+}
+
+.off{
+  background-color: lightslategrey;
+  cursor: not-allowed;
+}
+
+.on{
+  background-color: green;
+}
